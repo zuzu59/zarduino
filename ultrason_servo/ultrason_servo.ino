@@ -22,8 +22,6 @@ void setup()
     Serial.println("\n\nUltrasonic ranger v1.0 Test 0857"); // print some text in Serial Monitor
     Serial.println("with Arduino UNO R3");
     myServo.attach(10); // attaches the servo on pin 10 to the servo object
-
-
 }
 void loop()
 {
