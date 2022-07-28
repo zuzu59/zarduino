@@ -3,33 +3,40 @@
 
 int const zLED = 2; // LED branché sur la pin 1 du Grove Shield
 
-byte toto;  // variable byte toto
-int tutu;   // variable int tutu
-long tata;   // variable long tata
+word toto;  // variable toto
+word tutu;   // variable tutu
+word tata;   // variable tata
 
 // the setup function runs once when you press reset or power the board
 void setup() {
-  toto= 123; //toto
-  tutu = 321; //tutu
-  tata = 1234567890; //tata
-
-  tata = toto + 234; //adition afin de forcer l'utilisation des variables dans le code source
-
+  Serial.begin(9600); // open a serial connection to your computer
+  Serial.println("\n\nTests de code assembleur 1511"); // print some text in Serial Monitor
+  
   pinMode(zLED, OUTPUT);
-
   }
 
 // the loop function runs over and over again forever
 void loop() {
+
+  Serial.println("\nStart loop !"); // Affiche toto sur la console
+
   toto = 123;
-  tata = toto + 234; //adition afin de forcer l'utilisation des variables dans le code source
+  Serial.println(toto); // Affiche toto sur la console
+  
+  tutu = 234;
+  Serial.println(tutu); // Affiche tutu sur la console
+  
+  tata = toto + tutu; // addition des variables
+  Serial.println(tata); // Affiche tata sur la console
+
   
   digitalWrite(zLED, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(100);                       // wait for a second
+  delay(100);                       // wait for 100 mS
   digitalWrite(zLED, LOW);    // turn the LED off by making the voltage LOW
-  delay(100);                       // wait for a second
+  delay(100);                       // wait for 100 mS
   digitalWrite(zLED, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(100);                       // wait for a second
+  delay(100);                       // wait for 100 mS
   digitalWrite(zLED, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);                       // wait for a second
+  delay(5000);                       // wait for 1 S
+  
 }
