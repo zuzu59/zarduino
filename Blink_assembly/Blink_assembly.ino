@@ -1,8 +1,11 @@
 // Petit exemple tout simple pour 'voir' où se trouve dans le code source AVR les variables
-// zf220728.111355, zf230419.0102
+// zf220728.111355, zf230419.0105
 
 // Pour déassembler il faut faire:
 // /Users/zuzu/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-objdump -d /private/var/folders/cl/_6_53z4j1vx2jmdg66d254gh0000gn/T/arduino/sketches/F3AA373A5FCE5CC3E94EBEF85531EE48/Blink_assembly.ino.elf > toto.asm
+//
+// Sources pour déassembler du bin Arduino:
+// https://forum.arduino.cc/t/easy-command-to-see-disassembly-of-compiled-code/72938
 
 int const zLED = 2; // LED branché sur la pin 1 du Grove Shield
 
